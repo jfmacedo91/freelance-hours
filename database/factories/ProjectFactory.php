@@ -10,10 +10,10 @@ class ProjectFactory extends Factory {
 	{
 		return [
 			'title' => collect(fake()->words(5))->join(' '),
-			'description' => fake()->randomHtml(),
+			'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum molestias explicabo eum dolorum animi, nesciunt possimus doloribus excepturi officia nulla voluptatibus, dolores, illo consequatur. Possimus qui optio quasi eius?',
 			'ends_at' => fake()->dateTimeBetween('now', '+ 3 days'),
 			'status' => fake()->randomElement(['open', 'closed']),
-			'tech_stack' => fake()->randomElements(['react', 'php', 'laravel', 'vue', 'tailwindcss', 'javascript', 'nextjs', 'python'], random_int(1,5)),
+			'tech_stack' => fake()->randomElements(['react', 'nodejs', 'react', 'javascript', 'vite', 'nextjs'], random_int(1,5)),
 			'created_by' => User::factory()
 		];
 	}
